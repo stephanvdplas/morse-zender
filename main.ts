@@ -1,5 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 12) {
+    if (receivedNumber == 1) {
         game_started = 1
     } else if (receivedNumber >= 15) {
         unlocked = receivedNumber
