@@ -9,10 +9,10 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 input.onButtonPressed(Button.A, function () {
     if (game_started == 0) {
-        radio.sendNumber(12)
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
         basic.clearScreen()
+        radio.sendNumber(12)
     } else {
         speler.change(LedSpriteProperty.X, -1)
     }
