@@ -40,10 +40,10 @@ game_started = 0
 basic.forever(function () {
     if (game_started == 1) {
         game.setScore(0)
-        speler = game.createSprite(2, 0)
+        speler = game.createSprite(2, 4)
         basic.pause(500)
         for (let index = 0; index < 10; index++) {
-            fruit = game.createSprite(randint(0, 4), 4)
+            fruit = game.createSprite(randint(0, 4), 0)
             for (let index = 0; index < 4; index++) {
                 basic.pause(250)
                 fruit.change(LedSpriteProperty.Y, 1)
