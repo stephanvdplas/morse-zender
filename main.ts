@@ -1,5 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 1) {
+    if (receivedNumber == 12) {
         game_started = 1
     } else if (receivedNumber >= 15) {
         unlocked = receivedNumber
@@ -9,7 +9,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 input.onButtonPressed(Button.A, function () {
     if (game_started == 0) {
-        radio.sendNumber(5)
+        radio.sendNumber(12)
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
         basic.clearScreen()
