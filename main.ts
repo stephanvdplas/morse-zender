@@ -17,14 +17,10 @@ input.onButtonPressed(Button.A, function () {
         speler.change(LedSpriteProperty.X, -1)
     }
 })
-input.onButtonPressed(Button.AB, function () {
-    radio.sendNumber(unlocked)
-})
 input.onButtonPressed(Button.B, function () {
     if (game_started == 0) {
-        radio.sendNumber(5)
-        basic.showIcon(IconNames.SmallHeart)
-        basic.showIcon(IconNames.Heart)
+        radio.sendNumber(unlocked)
+        basic.showIcon(IconNames.Yes)
         basic.clearScreen()
     } else {
         speler.change(LedSpriteProperty.X, 1)
@@ -45,14 +41,14 @@ basic.forever(function () {
         for (let index = 0; index < 10; index++) {
             fruit = game.createSprite(randint(0, 4), 0)
             for (let index = 0; index < 4; index++) {
-                basic.pause(250)
+                basic.pause(350)
                 fruit.change(LedSpriteProperty.Y, 1)
             }
             if (fruit.isTouching(speler)) {
                 game.addScore(1)
                 radio.sendNumber(game.score())
-                fruit.delete()
             }
+            fruit.delete()
         }
         speler.delete()
         game_started = 0
