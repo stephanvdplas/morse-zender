@@ -34,6 +34,7 @@ let fruit: game.LedSprite = null
 let speler: game.LedSprite = null
 let unlocked = 0
 let game_started = 0
+radio.setGroup(1)
 game.setScore(0)
 game_started = 0
 basic.forever(function () {
