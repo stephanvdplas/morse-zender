@@ -51,6 +51,10 @@ basic.forever(function () {
             fruit.delete()
         }
         speler.delete()
+        basic.showIcon(IconNames.Yes)
+        radio.sendNumber(unlocked)
+        basic.clearScreen()
+        basic.pause(1000)
         game_started = 0
     }
 })
